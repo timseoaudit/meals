@@ -12,7 +12,7 @@ class MealsScreen extends StatelessWidget {
     Widget content = ListView.builder(
       itemCount: meals.length,
       itemBuilder: (ctx, index) => Text(
-        meals[index].title,
+        meals[index].title, style: TextStyle(color: Colors.white),
       ),
     );
 
@@ -39,7 +39,9 @@ class MealsScreen extends StatelessWidget {
     }
     return Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          title: Text(
+            title,
+          ),
         ),
         body: content);
   }
